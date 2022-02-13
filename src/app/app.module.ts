@@ -3,16 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ColorBoxComponent } from './components/color-box/color-box.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SignalRService } from './signalR-service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ColorBoxComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule 
   ],
-  providers: [],
+  providers: [SignalRService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
